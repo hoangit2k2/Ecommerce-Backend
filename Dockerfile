@@ -1,8 +1,6 @@
 FROM node:16.17.1
 WORKDIR /app 
-COPY package*.json ./
-RUN npm uninstall bcrypt
-RUN npm install bcryptjs
+COPY package*.json ./js
 RUN npm install
 COPY . .  
 EXPOSE 5000
